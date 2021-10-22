@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+#contenedor{
+    background-color: white;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items:center;
+    width: 70%;
+    height: 500px;
+    border-radius: 1px;
+    padding: 10px;    
+    color: white;
+    border: 5px solid black;
+}
+
+
+#boton{
+    font-weight: bold;
+    width: 20%;
+    height: 8%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background:linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    cursor: pointer;
+    box-shadow:
+		0 0 10px #203a43,
+		0 0 10px #2c5364;
+}
+

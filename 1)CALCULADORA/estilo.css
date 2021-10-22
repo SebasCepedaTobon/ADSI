@@ -108,6 +108,7 @@ input::-webkit-input-placeholder{
 }
 
 #opciones button{
+    cursor: pointer;
     width: 40px;
     height: 40px;
     padding:3px ;
