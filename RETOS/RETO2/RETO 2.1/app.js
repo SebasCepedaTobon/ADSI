@@ -1,35 +1,31 @@
 let alerta=document.getElementById("estado");
 let entrada=document.getElementById("entrada");
 let btn=document.getElementById("btn");
-let contenedorTarjeta=document.getElementById("contenedor-datos");
+let contenedorTarjeta=document.getElementById("contenedor-salida");
 let nombreUsuario=document.getElementById("nombreUsusario");
 let validacion=false;
+let caracteres=/^[ a-zA-Z0-9]{1,20}$/;
+entrada.addEventListener("keyup", validarCaracteres);
 
-let allowed=/[ a-zA-Z0-9]{1,20}$/;
-
-entrada.addEventListener("keyup", validate);
-
-
-
-function validate(){
-    if (allowed.test(entrada.value)) {
-        alerta.textContent="valido";
-        alerta.style.color="";
+function validarCaracteres(){
+    if (caracteres.test(entrada.value)) {
+        alerta.style.color="#1008FF";
+        alerta.textContent="Valido";
         validacion=true;
     }
     else{
-        alerta.style.color="#c31002";
         alerta.textContent="Caracter invalido, solo se permiten numeros y letras";
+        alerta.style.color="#E60505";
         validacion=false;
     }
 }
 
-btn.addEventListener("click", generateCard);
+btn.addEventListener("click", generarTarjeta);
 
-function generateCard(){
+function generarTarjeta(){
     if (validacion) {
-        contenedorTarjeta.style.visibility="visible";
         nombreUsuario.textContent=entrada.value;
+        contenedorTarjeta.style.visibility="visible";
     }
     else{
         contenedorTarjeta.style.visibility="hidden";

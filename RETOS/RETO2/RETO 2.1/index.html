@@ -8,21 +8,24 @@
     <title>Tarjeta</title>
 </head>
 <body>
-
     <h1>TARJETA</h1>
     <section id="contenedor-padre">
         <div id="contenedor-entrada">
             <div id="contenedor-ingreso">
-                <p>Comleta tu información</p>
+                <p id="info">Completa tu información</p>
                 <p id="estado"></p>
-                <input type="text" id="entrada" placeholder="Nombre Usuario">
-                <button id="btn">Generar</button>
+                <div>
+                    <label for="inputNombre"></label>
+                    <input type="text" id="entrada" name="inputNombre" placeholder="Nombre Usuario">
+                </div>
+                <button id="btn">GENERAR</button>
             </div>            
         </div>
         <div id="contenedor-salida">
             <div id="contenedor-datos">
                 <p id="nombreUsusario"></p>
             </div>
+            <p id="bienvenido">BIENVENID@</p>
         </div>
     </section>
     <script src="app.js"></script>
