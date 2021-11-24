@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>music</title>
+    <title>CARRITO</title>
 </head>
 <body>
-    <header class="cabecera">
-        
-            
-        
+    <header class="cabecera">        
         <div class="links">
             <img class="logo" src="img/logo.png" alt="">
             <div class="linksLI">
@@ -21,15 +18,31 @@
         </div>
         
     </header>
-    <main id="main">
+    <main class="contenedor-principal" id="main">
         <div class="tarjeta-wrap" id="tarjeta-wrap">
 
         </div>
     </main>
-    <script src="app.js"></script>
 
-    <footer class="footer">
-        <p>Realizado por sebastian cepeda</p>
+    <footer class="pie">
+        <template id="template-carrito">
+            <tr>
+                <td id="td-id">1</td>
+                <td><img src="" alt=""></td>
+                <td class="titulo-td">Messi</td>
+                <td id="td-precio">$<span>500</span></td>
+                <td><input class="cantidad" type="number" value="1"></td>
+                <td><button class="button-delete">borrar</button></td>
+            </tr>
+        </template>
     </footer>
+
+    <div id="Contenedor-precio">
+        <h3>Precio total:  </h3>
+        <p>0</p>
+        <button class="comprar-boton">Comprar</button>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/fa0f5c32de.js" crossorigin="anonymous"></script>
 </body>
 </html>
