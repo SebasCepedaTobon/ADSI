@@ -1,8 +1,13 @@
 const main = document.querySelector('#main');
 const cardTarjeta= document.querySelector('#tarjeta-wrap')
 const footer = document.querySelector('.pie')
+const contenedorPrecio = document.getElementById('Contenedor-precio')
 const templateCarrito = document.getElementById('template-carrito').content
+const contenedor_table = document.querySelector('#contenedorTable')
 
+
+const comprarBoton = document.querySelector('.comprar-boton')
+comprarBoton.addEventListener('click', comprar)
 
 const fragment = document.createDocumentFragment()
 
@@ -66,13 +71,13 @@ function create_card(){
 
 const addCarrito = e => {
     if(e.target.classList.contains('btn-agregar')){
-        setCarrito(e)
+        getCarrito(e)
     }
     e.stopPropagation()
 }
 
 
-function setCarrito(e){
+function getCarrito(e){
     const button = e.target
     const item = button.closest('.tarjeta')
 
@@ -91,6 +96,21 @@ function setCarrito(e){
 
 function addItem(itemNombre, itemPrecio, itemImg, itemId){
 
+    const elementoTitulo=footer.getElementsByClassName('titulo-td')
+    
+    for (let i = 0; i < elementoTitulo.length; i++) {
+        
+        if(elementoTitulo[i].innerText === itemNombre){
+            let elementoCantidad = elementoTitulo[i].parentElement.querySelector('.cantidad')
+            
+            elementoCantidad.value++;
+
+            actualizarPrecio()
+            return
+        }
+
+    }
+
     const contenedor_table = document.createElement('div')
     contenedor_table.setAttribute('id', 'contenedorTable')
 
@@ -98,12 +118,61 @@ function addItem(itemNombre, itemPrecio, itemImg, itemId){
     templateCarrito.querySelector('span').textContent = itemPrecio
     templateCarrito.querySelectorAll('td')[2].textContent = itemNombre
     templateCarrito.querySelectorAll('td')[0].textContent=itemId
+
     const clone = templateCarrito.cloneNode(true)
     fragment.appendChild(clone)
     contenedor_table.appendChild(fragment)
     footer.appendChild(contenedor_table)
+
+    contenedor_table.querySelector('.button-delete').addEventListener('click', eliminarItem)
+
+    contenedor_table.querySelector('.cantidad').addEventListener('click', cambiarCantidad)
+
+    actualizarPrecio()
 }
 
+
+function actualizarPrecio(){
+
+    let total=0;
+
+    const contenedor_Precio=contenedorPrecio.querySelector('p')
+    const contenedorTable=document.querySelectorAll('#contenedorTable')
+    
+    contenedorTable.forEach(contenedorTable =>{
+        const precioTable = contenedorTable.querySelector('span')
+        const valorPrecio = Number(precioTable.textContent.replace('$', ''))
+        const cantidadTable = contenedorTable.querySelector('input')
+
+        const valorCantidad=Number(cantidadTable.value)
+        
+        total = total+valorPrecio*valorCantidad
+    })
+
+    contenedor_Precio.innerHTML=`${total}$`
+}
+
+function eliminarItem(event){
+    const button = event.target
+    button.closest('#contenedorTable').remove()
+    actualizarPrecio()
+}
+
+function cambiarCantidad(event){
+    const input=event.target
+
+    if(input.value <=0){
+        input.closest('#contenedorTable').remove()
+        actualizarPrecio()
+    }
+
+    actualizarPrecio()
+}
+
+function comprar(){
+    footer.innerHTML=""
+    actualizarPrecio()
+}
 
 
 
