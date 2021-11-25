@@ -149,7 +149,7 @@ function actualizarPrecio(){
         total = total+valorPrecio*valorCantidad
     })
 
-    contenedor_Precio.innerHTML=`${total}$`
+    contenedor_Precio.innerHTML=`$${total}`
 }
 
 function eliminarItem(event){
