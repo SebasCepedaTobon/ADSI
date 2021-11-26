@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(17, 120, 146);
+    width: 100%;
+    height: 15%;
+    margin-top: -1.8%;
+}
+
+.titulo{
+    font-size: 240%;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.363),
+    0 0 10px rgba(0, 0, 0, 0.418),
+    0 0 5px rgba(0, 0, 0, 0.349);
+}
+
+.main-card{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.603),
+    0 0 10px rgba(0, 0, 0, 0.472),
+    0 0 5px rgba(0, 0, 0, 0.541);
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.textContent{
+    width: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.63),
+    0 0 10px rgba(0, 0, 0, 0.555),
+    0 0 5px rgba(0, 0, 0, 0.479);
+}
+
+.imagen-card{
+    width: 40%;
+    height: 50%;
+}
+
+.nombre-card{
+    color: rgba(17, 120, 146);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.63),
+    0 0 10px rgba(0, 0, 0, 0.555),
+    0 0 5px rgba(0, 0, 0, 0.479);
+}
+
+.botonGenerar{
+    font-size: 100%;
+    width: 12%;
+    height: 6%;
+    background-color: rgba(19, 218, 79, 0.87);
+    border: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.botonGenerar:hover{
+    box-shadow:
+		0 0 5px rgba(19, 218, 79, 0.87),
+		0 0 10px rgba(19, 218, 79, 0.87),
+		0 0 5px rgba(19, 218, 79, 0.87);
+}
+
+footer{
+    width: 100%;
+    height: 5px;
+    display: flex;
+    justify-content: baseline;
+}
+
+footer p{
+    margin-left: 15px;
+    color: rgba(17, 120, 146);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.63),
+    0 0 10px rgba(0, 0, 0, 0.555),
+    0 0 5px rgba(0, 0, 0, 0.479);
+}
