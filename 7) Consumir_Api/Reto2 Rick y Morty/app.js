@@ -4,7 +4,7 @@ const main_card = document.querySelector("#main-card");
 
 const template_card = document.querySelector("#template-card").content;
 
-const select = document.querySelector('.select');
+const seleccionar = document.querySelector('.seleccionar');
 
 const fragment = document.createDocumentFragment();
 
@@ -28,15 +28,15 @@ function generateCharacter (character){
         opcion.textContent=element.name
         fragment.appendChild(opcion);
     })
-    select.appendChild(fragment);
+    seleccionar.appendChild(fragment);
     crearCard(character)
-    select.addEventListener('change', function(){
+    seleccionar.addEventListener('change', function(){
         crearCard(character)
     })
 }
 
 const crearCard=element=> {
-    if(select.value =="todos"){
+    if(seleccionar.value =="todos"){
         main_card.innerHTML=""
         element.forEach(element => {
             template_card.querySelector('.nombre').textContent=element.name
@@ -48,13 +48,13 @@ const crearCard=element=> {
             main_card.appendChild(fragment)
         })
 
-    }if(select.value != "todos"){
+    }if(seleccionar.value != "todos"){
         main_card.innerHTML=""
-        const unudad = element.filter(element => element.name  === select.value)
+        const unidad = element.filter(element => element.name  === seleccionar.value)
         console.log(element.name)
-            template_card.querySelector('.nombre').textContent=unudad[0].name
-            template_card.querySelector('.imagen').src=unudad[0].image
-            template_card.querySelector('.genero').textContent=unudad[0].gender
+            template_card.querySelector('.nombre').textContent=unidad[0].name
+            template_card.querySelector('.imagen').src=unidad[0].image
+            template_card.querySelector('.genero').textContent=unidad[0].gender
 
             const clonar = template_card.cloneNode(true)
             fragment.appendChild(clonar)
