@@ -1,0 +1,133 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    width: 90%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-card{
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 180px;
+    height: 100px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 11px 11px 3px rgb(0 0 0 / 50%);
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;   
+}
+
+.card:hover{
+    transform: scale(1.10);
+}
+
+.boton1{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(88, 169, 240);
+}
+
+.boton1:hover{
+    box-shadow:
+		0 0 5px rgb(39, 132, 214),
+		0 0 10px rgb(39, 132, 214),
+		0 0 20px rgb(39, 132, 214),
+		0 0 180px rgb(39, 132, 214);
+}
+
+.boton2{
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(88, 169, 240);
+}
+
+.boton2:hover{
+    box-shadow:
+		0 0 5px rgb(39, 132, 214),
+		0 0 10px rgb(39, 132, 214),
+		0 0 20px rgb(39, 132, 214),
+		0 0 180px rgb(39, 132, 214);
+}
+
+.boton3{
+    width: 170px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(88, 169, 240);
+}
+
+.boton3:hover{
+    box-shadow:
+		0 0 5px rgb(39, 132, 214),
+		0 0 10px rgb(39, 132, 214),
+		0 0 20px rgb(39, 132, 214),
+		0 0 180px rgb(39, 132, 214);
+}
+
+.boton4{
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(88, 169, 240);
+}
+
+.boton4:hover{
+    box-shadow:
+		0 0 5px rgb(39, 132, 214),
+		0 0 10px rgb(39, 132, 214),
+		0 0 20px rgb(39, 132, 214),
+		0 0 180px rgb(39, 132, 214);
+}
+
+.boton5{
+    width: 210px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(88, 169, 240);
+}
+
+.boton5:hover{
+    box-shadow:
+		0 0 5px rgb(39, 132, 214),
+		0 0 10px rgb(39, 132, 214),
+		0 0 20px rgb(39, 132, 214),
+		0 0 180px rgb(39, 132, 214);
+}
+
+
+

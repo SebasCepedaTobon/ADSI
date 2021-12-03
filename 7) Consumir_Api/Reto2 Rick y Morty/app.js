@@ -1,4 +1,4 @@
-const URL = "https://rickandmortyapi.com/api/character";
+const URL = "https://dog.ceo/api/breeds/image/random";
 
 const main_card = document.querySelector("#main-card");
 
