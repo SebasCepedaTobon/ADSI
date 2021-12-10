@@ -1,4 +1,4 @@
-const URL = "https://dog.ceo/api/breeds/image/random";
+const URL = "https://rickandmortyapi.com/api/character/";
 
 const main_card = document.querySelector("#main-card");
 
@@ -49,9 +49,9 @@ const crearCard=element=> {
         })
 
     }if(seleccionar.value != "todos"){
+        console.log(seleccionar.value)
         main_card.innerHTML=""
         const unidad = element.filter(element => element.name  === seleccionar.value)
-        console.log(element.name)
             template_card.querySelector('.nombre').textContent=unidad[0].name
             template_card.querySelector('.imagen').src=unidad[0].image
             template_card.querySelector('.genero').textContent=unidad[0].gender
