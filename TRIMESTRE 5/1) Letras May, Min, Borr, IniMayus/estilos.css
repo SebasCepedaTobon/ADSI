@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000046; 
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046); 
+background: linear-gradient(to right, #1CB5E0, #000046); 
+    width: 100vw;
+    height: 100vh;
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.arriba{
+    color: white;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.abajo{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+hr{
+    width: 90%;
+}
+
+button{
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    padding:3px ;
+    border-radius: 3px;
+    font-size: 13px;
+    border: none;
+}
+
+button:hover{
+    box-shadow:
+    0 0 5px rgb(30, 255, 0),
+    0 0 10px rgb(102, 255, 0),
+    0 0 180px rgb(51, 255, 0);
+}
+
+.IMayuscula{
+    cursor: pointer;
+    width: 110px;
+    height: 25px;
+    padding:3px ;
+    border-radius: 3px;
+    font-size: 13px;
+    border: none;
+}
